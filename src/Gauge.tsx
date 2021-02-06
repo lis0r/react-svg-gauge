@@ -23,7 +23,7 @@ export interface IGaugeProps {
 
 export default class Gauge extends React.Component<IGaugeProps> {
   static defaultProps: IGaugeProps = {
-    label: "React SVG Gauge",
+    label: "",
     min: 0,
     max: 100,
     value: 40,
@@ -125,10 +125,12 @@ export default class Gauge extends React.Component<IGaugeProps> {
         height="100%"
         version="1.1"
         width="100%"
+        viewbox="0 0 {this.width} {this.height}"
+        preserveAspectRatio="xMidYMid meet"
         xmlns="http://www.w3.org/2000/svg"
         style={{
-          width: this.props.width,
-          height: this.props.height,
+          width: 100 %,
+          height: 100 %,
           overflow: "hidden",
           position: "relative",
           left: 0,
